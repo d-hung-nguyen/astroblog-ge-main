@@ -9,11 +9,12 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-	author: 'DanielCG', // Site author
-	title: 'Astro Theme OpenBlog', // Site title.
-	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // Description to display in the meta tags
+	author: 'Hung Nguyen', // Site author
+	title: 'Global Elite & Associates', // Site title.
+	description:
+		'Global Elite & Associates is a representative agency that provides bespoke luxury hospitality sales in DACH markets, UK, Central Europe, Benelux and the Nordics.', // Website description
 	lang: 'en-GB',
 	ogLocale: 'en_GB',
-	shareMessage: 'Share this post', // Message to share a post on social media
+	shareMessage: 'Share this', // Message to share a post on social media
 	paginationSize: 6 // Number of posts per page
 }

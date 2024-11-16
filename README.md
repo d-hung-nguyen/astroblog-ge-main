@@ -22,7 +22,7 @@
 5. [Stack](#-Stack)
 6. [Running locally](#-Running-Locally)
 7. [Configure](#-Configure)
-8. [Categories](#-Adding-a-category)
+8. [Markets](#-Adding-a-market)
 9. [Posts](#-Adding-a-post)
 10. [Draft](#-Activating-draft-mode)
 11. [FrontMatter](#-Frontmatter)
@@ -136,21 +136,21 @@ pnpm dev
   - open-graph -> the open-graph is the image that will be displayed when sharing the blog link. For posts, the preview image is the post cover.
 - Edit the social networks in the Header component - **src/components/Header.astro**, change the URL to your social network.
 
-## 🗂️ Adding a category
+## 🗂️ Adding a market
 
-To add a new category to your blog, simply go to the src/data/categories.ts file and add it to the array.
+To add a new market to your blog, simply go to the src/data/markets.ts file and add it to the array.
 
 Example:
 
 ```ts
-export  const  CATEGORIES  =  [
+export  const  MARKETS  =  [
 'JavaScript',
 'React',
-'new category here'  <---
+'new market here'  <---
 ]  as  const
 ```
 
-> 🚨 Zod checks whether the category is not correctly written or does not exist in the properties of the markdown document. **It will throw an error when building the application.** 🚨
+> 🚨 Zod checks whether the market is not correctly written or does not exist in the properties of the markdown document. **It will throw an error when building the application.** 🚨
 
 ## 📄 Adding a post
 
@@ -169,7 +169,7 @@ title: MacBook Pro 2022
 description: 'The new MacBook Pro 2022 is here. With the Apple M2 chip, a new design, and more, the new MacBook Pro is the best laptop Apple has ever made.'
 pubDate: 'Jul 02 2022'
 heroImage: '../../assets/bg.jpg'
-category: 'Category 1'
+market: 'market 1'
 tags: ['JavaScript', 'css', 'HTML5', 'GitHub']
 draft: true <---
 ```
@@ -182,7 +182,7 @@ draft: true <---
 - Description
 - pubDate
 - heroImage (post cover)
-- category (Choose a category from src/data/categories.ts)
+- market (Choose a market from src/data/markets.ts)
 
 ## Optional properties:
 

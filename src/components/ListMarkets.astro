@@ -1,0 +1,14 @@
+---
+import { getMarket } from '@/utils'
+import Market from '@/components/Market'
+const markets = await getMarket()
+
+const { activemarket } = Astro.props
+---
+
+<div class='relative flex flex-wrap min-w-full gap-5'>
+	<Market />
+	{markets.map((market: string) => <Market name={market} activeMarket={activemarket} />)}
+
+	<div class='hidden sm:block absolute w-full bottom-0 border-b-2 -z-40 dark:border-gray-600'></div>
+</div>

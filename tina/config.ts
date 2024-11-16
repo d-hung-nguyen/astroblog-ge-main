@@ -1,4 +1,4 @@
-import { CATEGORIES } from '../src/data/categories.ts'
+import { MARKETS } from '../src/data/markets.ts'
 import { defineConfig } from 'tinacms'
 
 // Your hosting provider likely exposes this as an environment variable
@@ -38,10 +38,10 @@ export default defineConfig({
 					{
 						type: 'string',
 						required: true,
-						name: 'category',
-						label: 'Category',
-						description: 'Select an category for this post',
-						options: [...CATEGORIES]
+						name: 'market',
+						label: 'market',
+						description: 'Select an market for this post',
+						options: [...MARKETS]
 					},
 					{
 						type: 'string',

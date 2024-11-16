@@ -1,11 +1,11 @@
 import { getCollection } from 'astro:content'
 
-export const getCategories = async () => {
+export const getMarket = async () => {
 	const posts = await getCollection('blog')
-	const categories = new Set(
+	const markets = new Set(
 		posts.filter((post) => !post.data.draft).map((post) => post.data.category)
 	)
-	return Array.from(categories)
+	return Array.from(markets)
 }
 
 export const getPosts = async (max?: number) => {
@@ -39,9 +39,9 @@ export const getPostByTag = async (tag: string) => {
 		})
 }
 
-export const filterPostsByCategory = async (category: string) => {
+export const filterPostsByMarket = async (market: string) => {
 	const posts = await getPosts()
 	return posts
 		.filter((post) => !post.data.draft)
-		.filter((post) => post.data.category.toLowerCase() === category)
+		.filter((post) => post.data.market.toLowerCase() === market)
 }
